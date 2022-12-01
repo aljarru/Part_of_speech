@@ -20,7 +20,7 @@ text_lower=text_clean.lower()
 st.write(text_lower)
 li=list(text_lower.split(" "))
 st.write(li)
-text_tokens = nltk.word_tokenize(text)
+# text_tokens = nltk.word_tokenize(text)
 
 text_tagged = nltk.pos_tag(li)
 st.write(text_tagged)
