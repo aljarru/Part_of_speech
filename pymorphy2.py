@@ -8,8 +8,6 @@ Created on Wed Nov 23 09:09:18 2022
 import streamlit as st
 import re
 import nltk
-from nltk.tag import pos_tag
-from nltk.tokenize import word_tokenize
 
 
 
@@ -22,7 +20,7 @@ text_lower=text_clean.lower()
 st.write(text_lower)
 li=list(text_lower.split(" "))
 st.write(li)
-text_tokens = word_tokenize(text)
+text_tokens = nltk.word_tokenize(text)
 
-text_tagged = pos_tag(li)
+text_tagged = nltk.pos_tag(li)
 st.write(text_tagged)
