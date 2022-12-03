@@ -15,12 +15,5 @@ text="This story is about something that happened to them when they were sent aw
 
 st.title("Разбор предложения по частям речи")
 st.write(text)
-text_clean=re.sub(r'[.,"\'-?:!;]', '', text)
-text_lower=text_clean.lower()
-st.write(text_lower)
-li=list(text_lower.split(" "))
-st.write(li)
-# text_tokens = nltk.word_tokenize(text)
-
-text_tagged = nltk.pos_tag(li)
-st.write(text_tagged)
+text_tokens =nltk.pos_tag(nltk.word_tokenize(text))
+st.write(text_tokens)
