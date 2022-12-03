@@ -1,2 +1,2 @@
 # Part_of_speech
-Part of speech project for russian luanguage
+Part of speech project for english luanguage
