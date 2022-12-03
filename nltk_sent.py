@@ -8,6 +8,7 @@ Created on Wed Nov 23 09:09:18 2022
 import streamlit as st
 import nltk
 nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 text=st.text_input('Введите предложение для разбора')
 #text="This story is about something that happened to them when they were sent away from London during the war because of the air-raids."
