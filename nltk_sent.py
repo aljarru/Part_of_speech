@@ -10,23 +10,23 @@ import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
-text=st.text_input('Введите предложение для разбора')
-#text="This story is about something that happened to them when they were sent away from London during the war because of the air-raids."
+text=st.text_input('Enter a sentence: ')
 
-st.title("Разбор предложения по частям речи")
+
+st.title("Parsing a sentence by parts of speech")
 st.write(text)
 
 text_tokens =nltk.pos_tag(nltk.word_tokenize(text))
 
-option=st.selectbox("Какую часть речи Вы хотите удалить(по умолчанию- существительные) ?", ['существительные', 'прилагательные', 'местоимения', 'глаголы'])
+option=st.selectbox("Which part of speech do you want to delete (nouns by default) ?", ['nouns', 'adjectives', 'pronouns', 'глаголы'])
 choice=[]
-if option=='существительные':
+if option=='nouns':
     choice=['NN', 'NNS', 'NNP', 'NNPS']
-elif option=='прилагательные':
+elif option=='adjectives':
     choice=['JJ', 'JJR', 'JJS']
-elif option=='местоимения':
+elif option=='pronouns':
     choice=['PRP', 'PRP$']
-elif option=='глаголы':
+elif option=='verbs':
     choice=['VB', 'VBG', 'VBD', 'VBN', 'VBP', 'VBZ', 'MD' ]
 else:
     choice=['NN', 'NNS', 'NNP', 'NNPS']
