@@ -18,7 +18,7 @@ st.write(text)
 
 text_tokens =nltk.pos_tag(nltk.word_tokenize(text))
 
-option=st.selectbox("Which part of speech do you want to delete (nouns by default) ?", ['nouns', 'adjectives', 'pronouns', 'глаголы'])
+option=st.selectbox("Which part of speech do you want to delete (nouns by default) ?", ['nouns', 'adjectives', 'pronouns', 'verbs'])
 choice=[]
 if option=='nouns':
     choice=['NN', 'NNS', 'NNP', 'NNPS']
